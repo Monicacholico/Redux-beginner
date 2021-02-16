@@ -1,16 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router';
 
 
 
-const Main = React.createClass({
+const Single = React.createClass({
     render() {
         return(
-            <div>
+            <div className="sinle-photo">
                 <h1>
-                    <Link to="/">Reduxtagram</Link>
+                    I'm the single
                 </h1>
             </div>
         )
     }
 })
+
+export default Single;
