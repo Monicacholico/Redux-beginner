@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router';
 
-
-
-const Main = React.createClass({
+class Main extends Component {
     render() {
-        return(
+        return (
             <div>
                 <h1>
                     <Link to="/">Reduxtagram</Link>
@@ -14,6 +12,7 @@ const Main = React.createClass({
             </div>
         )
     }
-})
+}
+
 
 export default Main;
