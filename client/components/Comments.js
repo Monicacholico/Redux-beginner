@@ -15,8 +15,8 @@ class Comments extends Component {
         e.preventDefault();
         console.log('submitting a form')
         const {postId} = this.props.params;
-        const author = this.props.author;
-        const comment = this.props.comment;
+        const author = this.refs.author;
+        const comment = this.refs.comment;
         console.log(this.refs);
         console.log(postId, author, comment)
     }
