@@ -15,12 +15,12 @@ class Comments extends Component {
     handleSubmit(e) {
         e.preventDefault();
         console.log('submitting a form')
-        const postId = this.props.params.postId;
+        const postId = this.props.params;
         console.log(postId);
 
-        const author = this.ref.author;
-        const comment = this.ref.comment;
-        console.log(this.ref);
+        const author = this.refs.author.value;
+        const comment = this.refs.comment.value;
+        console.log(this.refs);
         console.log(postId, author, comment)
     }
     render() {
