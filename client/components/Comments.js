@@ -7,7 +7,7 @@ class Comments extends Component {
                 <p>
                     <strong>{comment.user}</strong>
                     {comment.text}
-                    <button className="remove-comment">&times;</button>
+                    <button className="remove-comment" onClick={this.props.removeComment}>&times;</button>
                 </p>
             </div>
         )
@@ -20,12 +20,14 @@ class Comments extends Component {
 
         const author = this.refs.author.value;
         const comment = this.refs.comment.value;
+        this.props.addComment(postId, author, comment);
+        // this.refs.commenForm.reset();
         console.log(this.refs);
         console.log(postId, author, comment)
     }
     render() {
         return(
-            <div className="comment">
+            <div className="comments">
                 {this.props.postComments.map(this.renderComment)}
                 <form ref="commentForm" className="comment-form" onSubmit={this.handleSubmit.bind(this)}>
                     <input type="text" ref="author" placeholder="author"/>
