@@ -7,23 +7,23 @@ class Comments extends Component {
                 <p>
                     <strong>{comment.user}</strong>
                     {comment.text}
-                    <button className="remove-comment" onClick={this.props.removeComment}>&times;</button>
+                    <button
+                    className="remove-comment"
+                    // onClick={}
+                    >
+                        &times;
+                    </button>
                 </p>
             </div>
         )
     }
     handleSubmit(e) {
         e.preventDefault();
-        console.log('submitting a form')
-        const postId = this.props.params;
-        console.log(postId);
-
+        const { postId } = this.props.params;
         const author = this.refs.author.value;
         const comment = this.refs.comment.value;
         this.props.addComment(postId, author, comment);
-        // this.refs.commenForm.reset();
-        console.log(this.refs);
-        console.log(postId, author, comment)
+        this.refs.commentForm.reset();
     }
     render() {
         return(
