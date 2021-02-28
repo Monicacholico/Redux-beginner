@@ -1,21 +1,12 @@
 function postComments(state= [], action) {
     switch(action.type) {
         case 'ADD_COMMENT':
-            //return the new state with the new comment
             return [...state, {
                 user: action.author,
                 text: action.comment
-            }];
+            }] 
         case 'REMOVE_COMMENT':
-            console.log('Removing a comment');
-            //we need to return the new state without the deleted comment
-            // return [
-            //     ...state.slice(0,action.i),
-            //     ...state.slice(action.i + 1)
-            // ]
-            return state;
-        default:
-            return state;
+
     }
     return state;
 }
